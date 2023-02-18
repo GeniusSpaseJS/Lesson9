@@ -1,0 +1,52 @@
+.buttonBlock{
+    display: flex;
+    flex-direction: column;
+}
+.buttonItem{
+    margin: 30px;
+    width: 80px;
+    height: 80px;
+}
+.form {
+    margin: 0 auto;
+    text-align: center;
+    padding: 32px;
+
+}
+.input{
+    margin: 10px;
+}
+
+.parent, .child, .item{
+    margin: 30px;
+    padding: 10px;
+    outline: 1px solid  #FFC107;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    list-style: none;
+}
+
+.liItem{
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid red;
+}
+
+.liItem.active{
+background-color: red;
+
+}
+
+.ball{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    z-index: 20;
+    position: absolute;
+    border-radius: 50%;
+}
