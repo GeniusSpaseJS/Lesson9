@@ -7,6 +7,19 @@
 // const btn6 = document.querySelector("#btn6");
 
 // ------ .AddEventListener("method", ()=>{});
+// element.addEventListener(event, handler, [options]);
+// event
+// Назва події, наприклад "click".
+// handler
+// Посилання на функцію-обробник.
+// options
+// Додатковий об’єкт із властивостями:
+// --once: якщо true, тоді обробник буде автоматично вилучений після виконання.
+// --capture: фаза, на якій повинен спрацювати обробник, докладніше про це буде розказано у
+// розділі Bubbling and capturing. Так історично склалося, що options може бути false/true, це
+// те саме, що {capture: false/true}.
+// --passive: якщо true, тоді обробник ніколи не викличе preventDefault(), докладніше про це
+// буде розказано у розділі Типові дії браузера.
 
 // (document.querySelector("#btn1")).addEventListener("click", () => console.log("click")); // for click
 // btn2.addEventListener("contextmenu", () => console.log("contextmenu")); // for click - right 
@@ -152,3 +165,10 @@ ball.onmousedown = function (event) {
     document.removeEventListener("mousemove", onMouseMove);
   };
 };
+
+// Наш алгоритм Drag’n’Drop виглядає таким чином:
+// На mousedown – підготувати елемент до переміщення, якщо це необхідно
+// (наприклад, створити його клон, додати до нього клас або щось ще).
+// Потім, на mousemove перемістити його, змінивши значення left/top при
+// позиціюванні position: absolute.
+// На mouseup – виконати усі дії, пов’язані із завершенням перенесення.

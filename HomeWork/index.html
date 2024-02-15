@@ -5,8 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomeWork4</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="./js/script.js" ></script>
+
+  <button onclick="hideElement()">Зникнення елементу</button>
+  <div id="text">Текст, який може зникнути</div>
+
+  <button onclick="hideButton()">Зникнення кнопки</button>
+
+  <ul id="tree">
+    <li onclick="toggleChildren(this)">Root
+      <ul>
+        <li onclick="toggleChildren(this)">Child 1
+          <ul>
+            <li>Grandchild 1.1</li>
+            <li>Grandchild 1.2</li>
+          </ul>
+        </li>
+        <li>Child 2</li>
+      </ul>
+   </li> 
+  </ul>
+
+  <script src="./js/hideElement.js"></script>
+  <script src="./js/hideButton.js"></script>
+  <script src="./js/toggleTree.js"></script>
+
+    <!-- <input value="Натисни мене" onclick="alert('Клік!')" type="button"></input>
+
+    <div id="menu">
+      <button data-action="save">Зберегти</button>
+      <button data-action="load">Завантажити</button>
+      <button data-action="search">Пошук</button>
+    </div>
+
+    <script>
+      class Menu {
+        constructor(elem) {
+          this._elem = elem;
+
+          elem.onclick = this.onClick.bind(this);
+        }
+
+        save() {
+          alert('збереження');
+        }
+
+        load() {
+          alert('завантаження');
+        }
+
+        search() {
+          alert('пошук');
+        }
+
+        onClick(event) {
+          let action = event.target.dataset.action;
+          if (action) {
+            this[action]();
+          }
+        }
+      }
+
+      const menu = document.getElementById('menu'); // Corrected the ID to 'menu'
+      new Menu(menu);
+    </script> -->
 </body>
 </html>
