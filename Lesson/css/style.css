@@ -1,6 +1,7 @@
 .buttonBlock{
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
+    justify-content: space-between;
 }
 .buttonItem{
     margin: 30px;
@@ -15,6 +16,7 @@
 }
 .input{
     margin: 10px;
+    height: 35px;
 }
 
 .parent, .child, .item{
